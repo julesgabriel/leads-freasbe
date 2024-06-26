@@ -2,32 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer base {
+    :root {
+        --background: 32 66% 99%;
+        --foreground: 32 66% 5%;
+        --muted: 152 26% 94%;
+        --muted-foreground: 152 15% 35%;
+        --popover: 32 66% 99%;
+        --popover-foreground: 32 66% 5%;
+        --card: 32 66% 99%;
+        --card-foreground: 32 66% 5%;
+        --border: 32 5% 92%;
+        --input: 32 5% 92%;
+        --primary: 32 21% 56%;
+        --primary-foreground: 0 0% 0%;
+        --secondary: 152 21% 56%;
+        --secondary-foreground: 0 0% 0%;
+        --accent: 272 21% 56%;
+        --accent-foreground: 0 0% 0%;
+        --destructive: 15 81% 24%;
+        --destructive-foreground: 15 81% 84%;
+        --ring: 32 21% 56%;
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        --background: 32 48% 1%;
+        --foreground: 32 28% 98%;
+        --muted: 152 26% 6%;
+        --muted-foreground: 152 15% 65%;
+        --popover: 32 48% 1%;
+        --popover-foreground: 32 28% 98%;
+        --card: 32 48% 1%;
+        --card-foreground: 32 28% 98%;
+        --border: 32 5% 12%;
+        --input: 32 5% 12%;
+        --primary: 32 21% 56%;
+        --primary-foreground: 0 0% 0%;
+        --secondary: 152 21% 56%;
+        --secondary-foreground: 0 0% 0%;
+        --accent: 272 21% 56%;
+        --accent-foreground: 0 0% 0%;
+        --destructive: 15 81% 56%;
+        --destructive-foreground: 0 0% 0%;
+        --ring: 32 21% 56%;
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
 }
