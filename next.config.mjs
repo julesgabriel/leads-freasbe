@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    images: {
+        domains: [
+            "api.microlink.io",
+            'aceternity.com'
+        ],
+    },
+};
 
 export default nextConfig;
