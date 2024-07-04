@@ -13,8 +13,8 @@ export default function Footer(): JSX.Element {
                     {new Date().getFullYear()} Tous droits réservés
                 </p>
             </aside>
-            <nav>
-                <h3 className="footer-title text-2xl lg:text-base">Legal</h3>
+            <nav className="flex flex-col gap-y-4">
+                <h3 className="footer-title text-lg font-semibold">Legal</h3>
                 <Link className="link link-hover text-lg lg:text-base" href="/legal">Mentions légales</Link>
             </nav>
         </footer>

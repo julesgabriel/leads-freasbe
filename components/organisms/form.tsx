@@ -1,7 +1,7 @@
 import {z} from "zod";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
-import React, { useState } from "react";
+import React, {useState} from "react";
 import AutoForm, {AutoFormSubmit} from "@/components/ui/auto-form";
 
 /* export default function Form() {
@@ -37,163 +37,164 @@ import AutoForm, {AutoFormSubmit} from "@/components/ui/auto-form";
     } */
 
 
-        const Form = () => {
-          const [formData, setFormData] = useState({
-            firstName: '',
-            lastName: '',
-            email: '',
-            phone: '',
-            address: '',
-            zipCode: '',
-            area: '',
-            minRoofing: '',
-            professionalStatus: '',
-          });
-        
-          const handleChange = (e: any) => {
-            const { name, value } = e.target;
-            setFormData({
-              ...formData,
-              [name]: value,
-            });
-          };
-        
-          const handleSubmit = (e: any) => {
-            e.preventDefault();
-            console.log('Form Data Submitted:', formData);
-          };
-        
-          return (
-<form onSubmit={handleSubmit} className="max-w-lg mx-auto p-4 bg-white rounded-lg shadow-md relative mt-5 md:top-5 md:left-1/4 opacity-90 z-10">
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="mb-4">
-            <label className="block text-gray-700" htmlFor="firstName">Nom</label>
-            <input
-                id="firstName"
-                type="text"
-                name="firstName"
-                placeholder="John"
-                value={formData.firstName}
-                onChange={handleChange}
-                className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                required
-            />
-        </div>
-        <div className="mb-4">
-            <label className="block text-gray-700" htmlFor="lastName">Prénom</label>
-            <input
-                id="lastName"
-                type="text"
-                name="lastName"
-                placeholder="Doe"
-                value={formData.lastName}
-                onChange={handleChange}
-                className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                required
-            />
-        </div>
-        <div className="mb-4">
-            <label className="block text-gray-700" htmlFor="email">Email</label>
-            <input
-                id="email"
-                type="email"
-                name="email"
-                placeholder="email@example.com"
-                value={formData.email}
-                onChange={handleChange}
-                className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                required
-            />
-        </div>
-        <div className="mb-4">
-            <label className="block text-gray-700" htmlFor="phone">Numéro de téléphone</label>
-            <input
-                id="phone"
-                type="text"
-                name="phone"
-                placeholder="0123456789"
-                value={formData.phone}
-                onChange={handleChange}
-                className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                required
-            />
-        </div>
-        <div className="mb-4">
-            <label className="block text-gray-700" htmlFor="address">Adresse</label>
-            <input
-                id="address"
-                type="text"
-                name="address"
-                placeholder="1 rue des fleurs"
-                value={formData.address}
-                onChange={handleChange}
-                className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                required
-            />
-        </div>
-        <div className="mb-4">
-            <label className="block text-gray-700" htmlFor="zipCode">Code postal</label>
-            <input
-                id="zipCode"
-                type="text"
-                name="zipCode"
-                placeholder="75000"
-                value={formData.zipCode}
-                onChange={handleChange}
-                className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                required
-            />
-        </div>
-        <div className="mb-4">
-            <label className="block text-gray-700" htmlFor="area">Surface habitable</label>
-            <input
-                id="area"
-                type="text"
-                name="area"
-                placeholder="70"
-                value={formData.area}
-                onChange={handleChange}
-                className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                required
-            />
-        </div>
-        <div className="mb-4">
-            <label className="block text-gray-700" htmlFor="minRoofing">Surface de toiture</label>
-            <input
-                id="minRoofing"
-                type="text"
-                name="minRoofing"
-                placeholder="15"
-                value={formData.minRoofing}
-                onChange={handleChange}
-                className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                required
-            />
-        </div>
-        <div className="mb-4 col-span-1 md:col-span-2">
-            <label className="block text-gray-700" htmlFor="professionalStatus">Status professionel</label>
-            <select
-                id="professionalStatus"
-                name="professionalStatus"
-                value={formData.professionalStatus}
-                onChange={handleChange}
-                className="mt-1 p-2 w-full border rounded-md appearance-none bg-white bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-green-500"
-                required
-            >
-                <option value="">Sélectionnez un statut</option>
-                <option value="CDI">CDI</option>
-                <option value="Libéral">Libéral</option>
-                <option value="Retraité">Retraité</option>
-            </select>
-        </div>
-    </div>
-    <button type="submit" className="mt-4 p-2 w-full bg-green-500 text-white rounded-md hover:bg-green-600">
-        Envoyer
-    </button>
-</form>
-          );
-        };
-        
-        export default Form;
+const Form = () => {
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        address: '',
+        zipCode: '',
+        area: '',
+        minRoofing: '',
+        professionalStatus: '',
+    });
+
+    const handleChange = (e: any) => {
+        const {name, value} = e.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
+    };
+
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+        console.log('Form Data Submitted:', formData);
+    };
+
+    return (
+        <form onSubmit={handleSubmit}
+              className="max-w-2xl mx-auto p-4 bg-white rounded-lg shadow-md relative mt-5 md:top-5 opacity-90 z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                <div className="mb-4">
+                    <label className="block text-gray-700" htmlFor="firstName">Nom</label>
+                    <input
+                        id="firstName"
+                        type="text"
+                        name="firstName"
+                        placeholder="John"
+                        value={formData.firstName}
+                        onChange={handleChange}
+                        className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                        required
+                    />
+                </div>
+                <div className="mb-4">
+                    <label className="block text-gray-700" htmlFor="lastName">Prénom</label>
+                    <input
+                        id="lastName"
+                        type="text"
+                        name="lastName"
+                        placeholder="Doe"
+                        value={formData.lastName}
+                        onChange={handleChange}
+                        className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                        required
+                    />
+                </div>
+                <div className="mb-4">
+                    <label className="block text-gray-700" htmlFor="email">Email</label>
+                    <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="email@example.com"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                        required
+                    />
+                </div>
+                <div className="mb-4">
+                    <label className="block text-gray-700" htmlFor="phone">Numéro de téléphone</label>
+                    <input
+                        id="phone"
+                        type="text"
+                        name="phone"
+                        placeholder="0123456789"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                        required
+                    />
+                </div>
+                <div className="mb-4">
+                    <label className="block text-gray-700" htmlFor="address">Adresse</label>
+                    <input
+                        id="address"
+                        type="text"
+                        name="address"
+                        placeholder="1 rue des fleurs"
+                        value={formData.address}
+                        onChange={handleChange}
+                        className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                        required
+                    />
+                </div>
+                <div className="mb-4">
+                    <label className="block text-gray-700" htmlFor="zipCode">Code postal</label>
+                    <input
+                        id="zipCode"
+                        type="text"
+                        name="zipCode"
+                        placeholder="75000"
+                        value={formData.zipCode}
+                        onChange={handleChange}
+                        className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                        required
+                    />
+                </div>
+                <div className="mb-4">
+                    <label className="block text-gray-700" htmlFor="area">Surface habitable</label>
+                    <input
+                        id="area"
+                        type="text"
+                        name="area"
+                        placeholder="70"
+                        value={formData.area}
+                        onChange={handleChange}
+                        className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                        required
+                    />
+                </div>
+                <div className="mb-4">
+                    <label className="block text-gray-700" htmlFor="minRoofing">Surface de toiture</label>
+                    <input
+                        id="minRoofing"
+                        type="text"
+                        name="minRoofing"
+                        placeholder="15"
+                        value={formData.minRoofing}
+                        onChange={handleChange}
+                        className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                        required
+                    />
+                </div>
+                <div className="mb-4 col-span-1 md:col-span-2">
+                    <label className="block text-gray-700" htmlFor="professionalStatus">Status professionel</label>
+                    <select
+                        id="professionalStatus"
+                        name="professionalStatus"
+                        value={formData.professionalStatus}
+                        onChange={handleChange}
+                        className="mt-1 p-2 w-full border rounded-md appearance-none bg-white bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-green-500"
+                        required
+                    >
+                        <option value="">Sélectionnez un statut</option>
+                        <option value="CDI">CDI</option>
+                        <option value="Libéral">Libéral</option>
+                        <option value="Retraité">Retraité</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" className="mt-4 p-2 w-full bg-secondary text-white rounded-md hover:bg-green-600">
+                Envoyer
+            </button>
+        </form>
+    );
+};
+
+export default Form;
         
         

@@ -20,7 +20,6 @@ export default function Home() {
     return (
         <div>
             <Hero/>
-            <Form/>
             <FeatureSection/>
             <Footer/>
         </div>
