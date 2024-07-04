@@ -125,7 +125,7 @@ export default function FeatureSection() {
     ];
 
     return (
-        <section className="mt-6 py-14 relative bg-slate-900">
+        <section className=" py-14 relative bg-slate-900">
             <div className="max-w-screen-xl mx-auto px-4 text-gray-400 md:px-8">
                 <div className="relative max-w-2xl mx-auto sm:text-center">
                     <div className="relative z-10">

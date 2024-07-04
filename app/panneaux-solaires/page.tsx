@@ -4,6 +4,7 @@ import React from "react";
 import FeatureSection from "@/components/organisms/featureSection";
 import Hero from "@/components/organisms/hero";
 import Form from "@/components/organisms/form";
+import Footer from "@/components/organisms/footer";
 
 
 export default function Home() {
@@ -17,14 +18,18 @@ export default function Home() {
     ]
 
     return (
-        <div className="min-h-[200vh] bg-slate-900">
+        <div>
             <Hero/>
-
             <Form/>
             <FeatureSection/>
+            <Footer/>
         </div>
+        
     )
+    
 }
+
+
 
 /**
  *
