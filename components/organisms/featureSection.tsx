@@ -125,7 +125,7 @@ export default function FeatureSection() {
     ];
 
     return (
-        <section className=" py-14 relative bg-slate-900">
+        <section className=" py-14 relative">
             <div className="max-w-screen-xl mx-auto px-4 text-gray-400 md:px-8">
                 <div className="relative max-w-2xl mx-auto sm:text-center">
                     <div className="relative z-10">
@@ -151,9 +151,9 @@ export default function FeatureSection() {
                         {features.map((item, idx) => (
                             <li
                                 key={idx}
-                                className="bg-transparent transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset]  space-y-3 p-4 border rounded-xl"
+                                className="bg-transparent transform-gpu dark:[border:1px_solid] border-secondary dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset]  space-y-3 p-4 border rounded-xl"
                             >
-                                <div className="text-primary rounded-full p-4 transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] w-fit">{item.icon}</div>
+                                <div className="text-secondary rounded-full p-4 transform-gpu dark:[border:1px_solid] border-secondary dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] w-fit">{item.icon}</div>
                                 <h4 className="text-lg text-gray-300 font-bold font-geist tracking-tighter">
                                     {item.title}
                                 </h4>

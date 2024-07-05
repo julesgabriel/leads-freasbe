@@ -3,7 +3,7 @@ import Form from "@/components/organisms/form";
 
 export default function Hero() {
     return (
-        <div className="relative bg-gradient-to-b from-slate-600 to-slate-900">
+        <div className="relative bg-[url('/landscape-hero.png')] bg-center from-slate-600 to-slate-900">
             <div className="absolute top-0 z-[0] h-screen w-screen">
 
             </div>

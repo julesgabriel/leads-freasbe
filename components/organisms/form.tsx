@@ -65,7 +65,7 @@ const Form = () => {
 
     return (
         <form onSubmit={handleSubmit}
-              className="max-w-2xl mx-auto p-4 bg-white rounded-lg shadow-md relative mt-5 md:top-5 opacity-90 z-10">
+              className="max-w-2xl mx-auto p-4 bg-white rounded-lg shadow-md relative mt-5 md:top-5 z-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
                 <div className="mb-4">
                     <label className="block text-gray-700" htmlFor="firstName">Nom</label>
