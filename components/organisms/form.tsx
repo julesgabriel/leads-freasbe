@@ -64,7 +64,7 @@ const Form = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}
+        <form id="myForm" onSubmit={handleSubmit}
               className="max-w-2xl mx-auto p-4 bg-white rounded-lg shadow-md relative mt-5 md:top-5 z-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
                 <div className="mb-4">
@@ -73,7 +73,6 @@ const Form = () => {
                         id="firstName"
                         type="text"
                         name="firstName"
-                        placeholder="John"
                         value={formData.firstName}
                         onChange={handleChange}
                         className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -86,7 +85,6 @@ const Form = () => {
                         id="lastName"
                         type="text"
                         name="lastName"
-                        placeholder="Doe"
                         value={formData.lastName}
                         onChange={handleChange}
                         className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -99,7 +97,6 @@ const Form = () => {
                         id="email"
                         type="email"
                         name="email"
-                        placeholder="email@example.com"
                         value={formData.email}
                         onChange={handleChange}
                         className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -112,7 +109,6 @@ const Form = () => {
                         id="phone"
                         type="text"
                         name="phone"
-                        placeholder="0123456789"
                         value={formData.phone}
                         onChange={handleChange}
                         className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -125,7 +121,6 @@ const Form = () => {
                         id="address"
                         type="text"
                         name="address"
-                        placeholder="1 rue des fleurs"
                         value={formData.address}
                         onChange={handleChange}
                         className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -138,7 +133,6 @@ const Form = () => {
                         id="zipCode"
                         type="text"
                         name="zipCode"
-                        placeholder="75000"
                         value={formData.zipCode}
                         onChange={handleChange}
                         className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -146,12 +140,11 @@ const Form = () => {
                     />
                 </div>
                 <div className="mb-4">
-                    <label className="block text-gray-700" htmlFor="area">Surface habitable</label>
+                    <label className="block text-gray-700" htmlFor="area">Surface habitable en m2</label>
                     <input
                         id="area"
                         type="text"
                         name="area"
-                        placeholder="70"
                         value={formData.area}
                         onChange={handleChange}
                         className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -159,12 +152,11 @@ const Form = () => {
                     />
                 </div>
                 <div className="mb-4">
-                    <label className="block text-gray-700" htmlFor="minRoofing">Surface de toiture</label>
+                    <label className="block text-gray-700" htmlFor="minRoofing">Surface de toiture en m2</label>
                     <input
                         id="minRoofing"
                         type="text"
                         name="minRoofing"
-                        placeholder="15"
                         value={formData.minRoofing}
                         onChange={handleChange}
                         className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"

@@ -38,7 +38,7 @@ export default function Faq() {
                         <p className="text-gray-500 text-lg ">Vous ne trouvez pas la réponse à votre question ?</p>
                         <button type="submit"
                                 className="mt-4 p-2 w-1/2 bg-primary text-white rounded-md hover:opacity-95">
-                            Je souhaite être contacté
+                            <a href="#myForm">Je souhaite être contacté</a>
                         </button>
                     </div>
                 </div>
