@@ -1,4 +1,3 @@
-import {z} from "zod";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import React, {useState} from "react";
@@ -58,10 +57,22 @@ const Form = () => {
         });
     };
 
-    const handleSubmit = (e: any) => {
+    const handleSubmit = async (e: any) => {
         e.preventDefault();
-        console.log('Form Data Submitted:', formData);
-    };
+        try {
+            const response = await fetch(process.env.NEXT_PUBLIC_MAKE_LEAD_WEBHOOK_URI, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Error submitting form.');
+        }
+    }
+
 
     return (
         <form id="myForm" onSubmit={handleSubmit}
@@ -164,7 +175,7 @@ const Form = () => {
                     />
                 </div>
                 <div className="mb-4 col-span-1 md:col-span-2">
-                    <label className="block text-gray-700" htmlFor="professionalStatus">Status professionel</label>
+                    <label className="block text-gray-700" htmlFor="professionalStatus"> </label>
                     <select
                         id="professionalStatus"
                         name="professionalStatus"
