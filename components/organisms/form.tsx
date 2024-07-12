@@ -59,23 +59,20 @@ const Form = () => {
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();
-        console.log('Form Data Submitted:', formData);
-
         try {
-            const response = await fetch('https://hook.eu2.make.com/unpjj3e7lhyh91m7kor73fk3mi5t1d2z', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(formData)
+            const response = await fetch(process.env.NEXT_PUBLIC_MAKE_LEAD_WEBHOOK_URI, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
             });
-        }
-        catch (error) {
+        } catch (error) {
             console.error('Error:', error);
             alert('Error submitting form.');
-          }
         }
-    
+    }
+
 
     return (
         <form id="myForm" onSubmit={handleSubmit}
@@ -178,7 +175,7 @@ const Form = () => {
                     />
                 </div>
                 <div className="mb-4 col-span-1 md:col-span-2">
-                    <label className="block text-gray-700" htmlFor="professionalStatus">    </label>
+                    <label className="block text-gray-700" htmlFor="professionalStatus"> </label>
                     <select
                         id="professionalStatus"
                         name="professionalStatus"
