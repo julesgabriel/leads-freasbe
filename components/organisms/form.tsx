@@ -60,7 +60,11 @@ const Form = () => {
     const handleSubmit = async (e: any) => {
         e.preventDefault();
         try {
-            const response = await fetch(process.env.NEXT_PUBLIC_MAKE_LEAD_WEBHOOK_URI, {
+            if (!process.env.NEXT_PUBLIC_MAKE_LEAD_WEBHOOK_URI) {
+                console.error(new Error("NEXT_PUBLIC_MAKE_LEAD_WEBHOOK_URI environment variable is not set"))
+            }
+            const url: string= process.env.NEXT_PUBLIC_MAKE_LEAD_WEBHOOK_URI!;
+            const response = await fetch(url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
