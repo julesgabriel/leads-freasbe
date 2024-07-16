@@ -4,18 +4,22 @@ import React from "react";
 export default function Faq() {
     const faqsList = [
         {
+            i: "conseil.png",
             q: "Comment les systèmes photovoltaïques peuvent-ils s'adapter et évoluer avec les besoins énergétiques ?",
             a: "Les systèmes photovoltaïques peuvent être adaptés aux besoins énergétiques spécifiques et agrandis en fonction des besoins futurs. Que ce soit pour une petite installation résidentielle ou un grand parc solaire commercial, les panneaux solaires peuvent être ajoutés progressivement pour augmenter la capacité de production. Cette flexibilité permet de commencer avec une installation de taille modeste et d'ajouter des panneaux supplémentaires au fil du temps, en fonction de l'évolution des besoins en énergie et des budgets disponibles."
         },
         {
+            i: "financial.png",
             q: "Quel est le niveau d'entretien requis pour les panneaux photovoltaïques ?",
             a: "Les panneaux photovoltaïques nécessitent peu d'entretien, avec un simple nettoyage annuel et des contrôles occasionnels. Contrairement à d'autres systèmes énergétiques, les panneaux solaires n'ont pas de pièces mobiles qui s'usent. Un nettoyage annuel pour enlever la poussière et les débris ainsi que des vérifications périodiques pour s'assurer que tout fonctionne correctement sont généralement suffisants. Cela minimise les coûts et les efforts d'entretien tout en garantissant une performance optimale sur le long terme."
         },
         {
+            i: "contract.png",
             q: "Quelles aides et subventions sont disponibles pour les installations photovoltaïques en 2024 ?",
-            a: "En 2024, plusieurs aides et subventions sont disponibles pour les installations photovoltaïques, réduisant considérablement le coût initial. Ces incitations financières peuvent provenir de sources gouvernementales, locales ou même d'entreprises privées. Elles incluent des crédits d'impôt, des subventions directes, des prêts à taux réduit, et des programmes de rachat de l'énergie excédentaire produite. Ces aides rendent l'installation de panneaux solaires plus abordable et accélèrent le retour sur investissement."
+            a: "En 2024, plusieurs aides et subventions sont disponibles pour les installations photovoltaïques, réduisant considérablement le coût initial. Ces incitations financières peuvent provenir de sources gouvernementales, locales ou même d'entreprises privées. Des subventions directes, des prêts à taux réduit, aide a l'auto consomation, taux de tva reduit et des programmes de rachat de l'énergie excédentaire produite. Ces aides rendent l'installation de panneaux solaires plus abordable et accélèrent le retour sur investissement."
         },
         {
+            i: "phone.png",
             q: "Quelle est la durée de vie et la fiabilité des panneaux photovoltaïques ?",
             a: "Les panneaux photovoltaïques sont une technologie fiable avec une durée de vie de 25 à 30 ans, garantissant une production d'énergie stable. Fabriqués à partir de matériaux robustes et résistants aux intempéries, ces panneaux continuent de fonctionner efficacement pendant des décennies. De plus, la plupart des fabricants offrent des garanties de performance à long terme, assurant que les panneaux produiront un certain pourcentage de leur capacité nominale même après 25 ans. Cette longévité et fiabilité font des panneaux solaires un investissement solide et durable pour la production d'énergie verte."
         },
@@ -47,12 +51,15 @@ export default function Faq() {
                         {faqsList.map((item, idx) => (
                             <li className="py-5" key={idx}>
                                 <summary className="text-lg flex items-center justify-between font-semibold text-primary">
+                                <div>
+                                <img src={item.i} alt="" />
                                     {item.q}
+                                </div>
                                 </summary>
                                 <p
                                     className="mt-3 text-gray-500 leading-relaxed"
                                 >
-                                    {item.a}
+                                    {item.a}   
                                 </p>
                             </li>
                         ))}

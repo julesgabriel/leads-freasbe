@@ -44,9 +44,10 @@ const Form = () => {
         phone: '',
         address: '',
         zipCode: '',
-        area: '',
-        minRoofing: '',
+        AmountOfEnergyConsumption: '',
+        modeOfHeating: '',
         professionalStatus: '',
+        owner: '',
     });
 
     const handleChange = (e: any) => {
@@ -154,29 +155,52 @@ const Form = () => {
                         required
                     />
                 </div>
-                <div className="mb-4">
-                    <label className="block text-gray-700" htmlFor="area">Surface habitable en m2</label>
-                    <input
-                        id="area"
-                        type="text"
-                        name="area"
-                        value={formData.area}
+                <div className="mb-4 col-span-1 md:col-span-2">
+                    <label className="block text-gray-700" htmlFor="owner">    </label>
+                    <select
+                        id="owner"
+                        name="owner"
+                        value={formData.owner}
                         onChange={handleChange}
-                        className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                        className="mt-1 p-2 w-full border rounded-md appearance-none bg-white bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-green-500"
                         required
-                    />
+                    >
+                        <option value="">Etes vous propriétaire</option>
+                        <option value="Oui"> Oui</option>
+                        <option value="Non">Non</option>
+                    </select>
                 </div>
-                <div className="mb-4">
-                    <label className="block text-gray-700" htmlFor="minRoofing">Surface de toiture en m2</label>
-                    <input
-                        id="minRoofing"
-                        type="text"
-                        name="minRoofing"
-                        value={formData.minRoofing}
+                <div className="mb-4 col-span-1 md:col-span-2">
+                    <label className="block text-gray-700" htmlFor="modeOfHeating">    </label>
+                    <select
+                        id="modeOfHeating"
+                        name="modeOfHeating"
+                        value={formData.modeOfHeating}
                         onChange={handleChange}
-                        className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                        className="mt-1 p-2 w-full border rounded-md appearance-none bg-white bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-green-500"
                         required
-                    />
+                    >
+                        <option value="">Sélectionnez un mode de chauffage</option>
+                        <option value="Gaz">Gaz</option>
+                        <option value="Eletrique">Electrique</option>
+                        <option value="Fioul">Fioul</option>
+                    </select>
+                </div>
+                <div className="mb-4 col-span-1 md:col-span-2">
+                    <label className="block text-gray-700" htmlFor="AmountOfEnergyConsumption">    </label>
+                    <select
+                        id="AmountOfEnergyConsumption"
+                        name="AmountOfEnergyConsumption"
+                        value={formData.AmountOfEnergyConsumption}
+                        onChange={handleChange}
+                        className="mt-1 p-2 w-full border rounded-md appearance-none bg-white bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-green-500"
+                        required
+                    >
+                        <option value="">Sélectionnez votre montant de consomation energetique mensuel</option>
+                        <option value="100"> entre 100€ et 200€</option>
+                        <option value="200">entre 200€ et 300€</option>
+                        <option value="300">400€ et plus</option>
+                    </select>
                 </div>
                 <div className="mb-4 col-span-1 md:col-span-2">
                     <label className="block text-gray-700" htmlFor="professionalStatus"> </label>
@@ -195,7 +219,7 @@ const Form = () => {
                     </select>
                 </div>
             </div>
-            <button type="submit" className="mt-4 p-2 w-full bg-secondary text-white rounded-md hover:bg-green-600">
+            <button type="submit" className="mt-4 p-2 w-full bg-primary text-white rounded-md hover:bg-blue-600">
                 Envoyer
             </button>
         </form>

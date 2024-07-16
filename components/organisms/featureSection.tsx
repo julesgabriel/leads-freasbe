@@ -21,7 +21,7 @@ export default function FeatureSection() {
                 </svg>
             ),
             "title": "Indépendance Énergétique",
-            "desc": "Produire sa propre électricité grâce aux panneaux photovoltaïques permet d'accroître son indépendance énergétique et de réduire la dépendance aux fournisseurs."
+            "desc": "Produire sa propre électricité grâce aux panneaux photovoltaïques permet d'accroître son indépendance énergétique, de pratiquer l'autoconsommation et de réduire la dépendance aux fournisseurs."
         },
         {
             icon: (
@@ -224,6 +224,15 @@ export default function FeatureSection() {
                         <p className="mt-3 font-geist text-gray-500">
                             En passant à l'énergie solaire, vous bénéficiez de nombreux avantages, tant sur le plan écologique que économique
                         </p>
+                        <div className="bloc-img flex justify-center">
+                            <img className="img-energy" src="edf.png" alt="" />
+                            <img className="img-energy" src="engie.png" alt=""/>
+                            <img className="img-energy" src="total.png" alt=""/>
+                            <img className="transition" src="transition.png" alt=""/>
+
+
+                        </div>
+                        
                     </div>
                     <div
                         className="absolute inset-0 max-w-xs mx-auto h-44 blur-[118px]"
@@ -239,11 +248,11 @@ export default function FeatureSection() {
                         {features.map((item, idx) => (
                             <li
                                 key={idx}
-                                className="bg-transparent transform-gpu dark:[border:1px_solid] border-secondary dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset]  space-y-3 p-4 border rounded-xl"
+                                className="bg-transparent transform-gpu dark:[border:1px_solid] border-primary dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset]  space-y-3 p-4 border rounded-xl"
                             >
                                 <div
-                                    className="text-secondary rounded-full py-2  transform-gpu dark:[border:1px_solid] border-secondary dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] w-fit">{item.icon}</div>
-                                <h4 className="text-lg text-gray-500 font-bold font-geist tracking-tighter">
+                                    className="text-orange-600 rounded-full py-2  transform-gpu dark:[border:1px_solid] border-secondary dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] w-fit">{item.icon}</div>
+                                <h4 className="text-lg text-primary font-bold font-geist tracking-tighter">
                                     {item.title}
                                 </h4>
                                 <p className="text-gray-500">{item.desc}</p>
