@@ -224,15 +224,22 @@ export default function FeatureSection() {
                         <p className="mt-3 font-geist text-gray-500">
                             En passant à l'énergie solaire, vous bénéficiez de nombreux avantages, tant sur le plan écologique que économique
                         </p>
-                        <div className="bloc-img flex justify-center">
-                            <img className="img-energy" src="edf.png" alt="" />
-                            <img className="img-energy" src="engie.png" alt=""/>
-                            <img className="img-energy" src="total.png" alt=""/>
-                            <img className="transition" src="transition.png" alt=""/>
-
-
+                        <div className="container mx-auto p-4">
+                        <div className="bloc-img grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center items-center">
+                            <div className="flex justify-center">
+                                <img className="img-energy w-full h-auto lg:mr-8" src="edf.png" alt="EDF" />
+                            </div>
+                            <div className="flex justify-center">
+                                <img className="img-energy w-full h-auto lg:mr-8" src="engie.png" alt="Engie" />
+                            </div>
+                            <div className="flex justify-center">
+                                <img className="img-energy w-full h-auto lg:mr-8" src="total.png" alt="Total" />
+                            </div>
+                            <div className="flex justify-center">
+                                <img className="transition w-full h-auto" src="transition.png" alt="Transition" />
+                            </div>
                         </div>
-                        
+                        </div>
                     </div>
                     <div
                         className="absolute inset-0 max-w-xs mx-auto h-44 blur-[118px]"
