@@ -13,7 +13,7 @@ export default function Hero() {
                             Autofinancer son installation grace{" "}
                             <span
                                 className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-blue-500">
-                                à l'autoconsomation
+                                à l'autoconsommation
               </span>
                         </h1>
 

@@ -6,18 +6,18 @@ html {
     scroll-behavior: smooth;
   }
 
-  .bloc-img {
-    margin-top: 10px;
-  }
-  .bloc-img .img-energy{
-    width: 100px !important;
-    height: 80px !important;
-  }
+.animate-toast {
+    animation: slide-down 0.5s;
+}
 
-  .transition {
-    width: 150px;
-    height: 100px;
-  }
+@keyframes slide-down {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
 
 @layer base {
     :root {

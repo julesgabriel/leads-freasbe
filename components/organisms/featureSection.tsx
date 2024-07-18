@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function FeatureSection() {
 
@@ -129,90 +130,6 @@ export default function FeatureSection() {
         },
     ];
 
-    const FAQ = [
-        {
-            icon: (
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-6 h-6"
-                >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"
-                    />
-                </svg>
-            ),
-            "title": "Adaptabilité et Scalabilité",
-            "desc": "Les systèmes photovoltaïques peuvent être adaptés aux besoins énergétiques spécifiques et agrandis en fonction des besoins futurs."
-        },
-        {
-            icon: (
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-6 h-6"
-                >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"
-                    />
-                </svg>
-            ),
-            "title": "Facilité d'Entretien",
-            "desc": "Les panneaux photovoltaïques nécessitent peu d'entretien, avec un simple nettoyage annuel et des contrôles occasionnels."
-        },
-        {
-            icon: (
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-6 h-6"
-                >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
-                    />
-                </svg>
-            ),
-            "title": "Aides et Subventions Disponibles",
-            "desc": "En 2024, plusieurs aides et subventions sont disponibles pour les installations photovoltaïques, réduisant considérablement le coût initial."
-        },
-        {
-            icon: (
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-6 h-6"
-                >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
-                    />
-                </svg>
-            ),
-            "title": "Technologie Fiable et Durable",
-            "desc": "Les panneaux photovoltaïques sont une technologie fiable avec une durée de vie de 25 à 30 ans, garantissant une production d'énergie stable."
-        },
-    ]
-
-
     return (
         <section className=" py-14 relative">
             <div className="max-w-screen-xl mx-auto px-4 text-gray-400 md:px-8">
@@ -222,23 +139,21 @@ export default function FeatureSection() {
                             Un avantage écologique ET économique
                         </h2>
                         <p className="mt-3 font-geist text-gray-500">
-                            En passant à l'énergie solaire, vous bénéficiez de nombreux avantages, tant sur le plan écologique que économique
+                            En passant à l'énergie solaire, vous bénéficiez de nombreux avantages, tant sur le plan
+                            écologique que économique
                         </p>
                         <div className="container mx-auto p-4">
-                        <div className="bloc-img grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center items-center">
-                            <div className="flex justify-center">
-                                <img className="img-energy w-full h-auto lg:mr-8" src="edf.png" alt="EDF" />
+                            <div
+                                className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16 items-center">
+                                <Image className="lg:mr-8 object-contain" width="500" height="500" src="/edf.png"
+                                       alt="EDF"/>
+                                <Image className="lg:mr-8 object-contain" width="500" height="500" src="/engie.png"
+                                       alt="Engie"/>
+                                <Image className="lg:mr-8 object-contain" width="500" height="500" src="/total.png"
+                                       alt="Total"/>
+                                <Image className="object-contain" width="500" height="500" src="/transition.png"
+                                       alt="Transition"/>
                             </div>
-                            <div className="flex justify-center">
-                                <img className="img-energy w-full h-auto lg:mr-8" src="engie.png" alt="Engie" />
-                            </div>
-                            <div className="flex justify-center">
-                                <img className="img-energy w-full h-auto lg:mr-8" src="total.png" alt="Total" />
-                            </div>
-                            <div className="flex justify-center">
-                                <img className="transition w-full h-auto" src="transition.png" alt="Transition" />
-                            </div>
-                        </div>
                         </div>
                     </div>
                     <div
