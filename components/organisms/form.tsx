@@ -28,7 +28,7 @@ const Form = () => {
         owner: '',
     });
 
-    const [error, setError] = useState<ZodIssue[]>(null);
+    const [error, setError] = useState<ZodIssue[] | null>(null);
 
     const handleChange = (e: any) => {
         const {name, value} = e.target;
